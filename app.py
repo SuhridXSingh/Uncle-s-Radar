@@ -7,7 +7,7 @@ import time
 st.set_page_config(page_title="Uncle's Radar", page_icon="💰", layout="wide")
 
 # --- TITLE & INTRO ---
-st.title("Uncle's Insider Radar")
+st.title("💰 Uncle's Insider Radar")
 st.markdown("### The 'High Conviction' Stock Screener")
 st.markdown("""
 This tool automates the **'Promoter Buying Strategy'**. It scans raw NSE data to find companies 
@@ -79,12 +79,12 @@ if uploaded_file is not None:
     grouped_df = grouped_df.sort_values(by='Value (Cr)', ascending=False)
 
     # SHOW RAW RESULTS
-    st.subheader(f"📢 Found {len(grouped_df)} Companies with Promoter Buying")
+    st.subheader(f"Found {len(grouped_df)} Companies with Promoter Buying")
     st.dataframe(grouped_df.head(10), use_container_width=True)
 
     # --- STEP 2: FUNDAMENTAL CHECK ---
     st.divider()
-    st.subheader("🔍 Step 2: Quality Check (Yahoo Finance)")
+    st.subheader("Step 2: Quality Check (Yahoo Finance)")
     st.markdown("We will now cross-reference these companies with live market data to remove 'Traps'.")
     
     col1, col2 = st.columns([2, 1])
@@ -93,7 +93,7 @@ if uploaded_file is not None:
     with col2:
         st.write("") # Spacer
         st.write("") # Spacer
-        run_scan = st.button("Run Deep Scan 🚀", type="primary")
+        run_scan = st.button("Run Deep Scan", type="primary")
     
     if run_scan:
         progress_bar = st.progress(0)
@@ -152,7 +152,7 @@ if uploaded_file is not None:
         ]
         
         # SHOW FINAL LIST
-        st.success(f"🏆 Found {len(gold_stocks)} Golden Stocks!")
+        st.success(f"Found {len(gold_stocks)} Golden Stocks!")
         st.dataframe(gold_stocks.style.highlight_max(axis=0, color='lightgreen'), use_container_width=True)
         
         # SHOW REJECTS
@@ -167,4 +167,5 @@ st.warning("""
 The creator of this tool is **not** a SEBI registered Research Analyst or Investment Advisor. 
 The stocks listed above are **not** buy/sell recommendations. Market data (via Yahoo Finance) may be delayed or inaccurate. 
 Please consult a certified financial advisor before making any investment decisions.
+
 """)
