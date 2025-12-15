@@ -7,7 +7,7 @@ import time
 st.set_page_config(page_title="Uncle's Radar", page_icon="💰", layout="wide")
 
 # --- TITLE & INTRO ---
-st.title("💰 Uncle's Insider Radar")
+st.title("Insider Conviction Radar")
 st.markdown("### The 'High Conviction' Stock Screener")
 st.markdown("""
 This tool automates the **'Promoter Buying Strategy'**. It scans raw NSE data to find companies 
@@ -169,3 +169,4 @@ The stocks listed above are **not** buy/sell recommendations. Market data (via Y
 Please consult a certified financial advisor before making any investment decisions.
 
 """)
+
