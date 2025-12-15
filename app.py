@@ -4,7 +4,7 @@ import yfinance as yf
 import time
 
 # --- PAGE CONFIGURATION ---
-st.set_page_config(page_title="Uncle's Radar", page_icon="💰", layout="wide")
+st.set_page_config(page_title="Insider Conviction Radar", page_icon="💰", layout="wide")
 
 # --- TITLE & INTRO ---
 st.title("Insider Conviction Radar")
@@ -169,4 +169,5 @@ The stocks listed above are **not** buy/sell recommendations. Market data (via Y
 Please consult a certified financial advisor before making any investment decisions.
 
 """)
+
 
